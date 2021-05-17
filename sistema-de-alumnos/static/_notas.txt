@@ -1,0 +1,21 @@
+estudiantes:
+
+listar materias 
+entrar a la materia y ver descripcion e informacion
+incribirse a una materia
+
+administrador:
+
+gestiona(agrega, quita, edita) a los profesores, cada profesor tiene nombre apellido dni y si esta activo o no
+
+gestiona materias... cada materia tiene nombre horario, profesor, cupo maximo de alumnos
+
+
+posibles rutas:
+
+-home
+- soy alumnos:
+        materias - ver materias- anotarse
+- Administrar
+        profesores- ver profesores - agregar
+        materias- agregar, quitar, editar
