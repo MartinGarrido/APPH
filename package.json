@@ -4,9 +4,12 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
-    "build": "sapper build --legacy",
-    "export": "sapper export --legacy",
-    "start": "node __sapper__/build"
+    
+    "start": "node __sapper__/build",
+    "dev:tailwindcss": "postcss static/tailwind.css -o static/main.css -w",
+    "build:tailwindcss": "NODE_ENV=production postcss static/tailwind.css -o static/main.css",
+    "build": "npm run build:tailwindcss && sapper build --legacy",
+    "export": "npm run build:tailwindcss && sapper export --legacy"
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^4.0.3",
@@ -25,6 +28,7 @@
     "@rollup/plugin-node-resolve": "^8.0.0",
     "@rollup/plugin-replace": "^2.4.0",
     "@rollup/plugin-url": "^5.0.0",
+    "autoprefixer": "^10.2.5",
     "postcss-cli": "^8.3.1",
     "rollup": "^2.3.4",
     "rollup-plugin-svelte": "^7.0.0",
